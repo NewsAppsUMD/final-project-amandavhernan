@@ -2,10 +2,22 @@
 
 ## Update | 4/21/23
 
-This week, I loaded in the known PFAS sites dataset and joined it with 2020 ACS Census variables for race, housing, and income. The dataset is currently stored as a CSV and SQL database. 
+This week, I loaded in the known PFAS sites dataset. The dataset is currently stored as a CSV and SQLite database. I also did some geocoding to get the counties for each site since that was missing from the original dataset. I plan to extract some Census variables and merge that dataset with the original by state, county, and ZIP code. This will allow me to draw more meaningful conclusions about nationwide PFAS contamination.
+
+The ACS variables I'm interested in are: 
+* Total population
+* Race/ethnicity
+* Median age
+* Median household income
+* Number of housing units
+* Number of homeowner occupied units
+* Number of renter occupied units
+* Total foreign-born population
+* Total US-born population
 
 ### Goals
 
+- [ ] Grab Census ACS variables and merge with dataset
 - [ ] Set up app.py and index.html scripts (mapbox choropleth maps with search/filter feature, searchable table)
 - [ ] Set up analysis.py script to summarize counts by ZIP code, county, and state
 - [ ] Experiment with CSS styling
