@@ -1,14 +1,16 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=10863207)
 
-## Update | 4/21/23
-
-This week, I loaded in the known PFAS sites dataset. The dataset is currently stored as a CSV and SQLite database. I also used [Geocodio's](https://www.geocod.io/) free geocoding service to get the counties for each site since that was missing from the original dataset. I plan to extract some Census variables and merge that dataset with the original by state, county, and ZIP code. This will allow me to draw more meaningful conclusions about nationwide PFAS contamination.
+## Update | 4/28/23
 
 CSV → SQLite
 ``` 
 pip install sqlite-utils
-sqlite-utils insert known_sites.db pfas known_sites.csv --csv
+sqlite-utils insert known_sites.db pfas data/known_sites_clean.csv --csv
 ``` 
+
+## Update | 4/21/23
+
+This week, I loaded in the known PFAS sites dataset. The dataset is currently stored as a CSV and SQLite database. I also used [Geocodio's](https://www.geocod.io/) free reverse geocoding service to get the counties for each site since that was missing from the original dataset. I plan to extract some Census variables and merge that dataset with the original by state, county, and ZIP code. This will allow me to draw more meaningful conclusions about nationwide PFAS contamination.
 
 The ACS variables I'm interested in are: 
 * Total population
