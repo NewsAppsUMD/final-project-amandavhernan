@@ -26,8 +26,8 @@ The ACS variables I'm interested in are:
 ### Goals
 
 - [ ] Grab Census ACS variables and merge with original dataset
-- [ ] Set up app.py and index.html scripts (mapbox choropleth maps with search/filter feature, searchable table)
-- [ ] Set up analysis.py script to summarize counts by ZIP code, county, and state
+- [ ] Set up app and index.html scripts (mapbox choropleth maps with search/filter feature, searchable table)
+- [ ] Set up analysis script to summarize data by ZIP code, county, and state
 - [ ] Experiment with CSS styling
 
 ## Update | 4/14/23
