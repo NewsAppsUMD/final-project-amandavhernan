@@ -1,6 +1,14 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=10863207)
 
+## Update | 5/6/23
+
+This week, I analyzed the dataset I'm working with a bit further by finding the top counties, states, and ZIP codes with the most PFAS sites and determining whether there are any racial/ethnic or income disparities. Since the dataset isn't that reliable because of missing Census demographic information, I don't think it's a good idea to lean on this analysis in my final news app. Instead, I want my app to be more exploratory and allow users to navigate the data however they choose to. I'm envisioning a color-coded locator map and a searchable table as the main elements. For the map, users will be able to hover each point to learn more about it. Some information I plan to include is the site/facility name, address, total pfas level detected, and demographics (race/ethnicity, housing, median household income, etc.). For the overall aesthetic of my news app, I'm planning to keep it very simple with green as a possible accent color. I may also incorporate some emojis or other graphics to make it more interesting and engaging. 
+
 ## Update | 4/28/23
+
+This week, I largely focused on extracting Census variables and experimenting with how my app will function and what it will look like. Before extracting any Census variables, I cleaned the dataset a bit by fixing some typos. Then, I extracted the cleaned dataset and created three different versions to hold Census data by state, county, and ZIP code. I also updated the SQLite database I made last week with the clean dataset. Next week, I plan to take these dataframes and analyze each one using the newly added Census variables. I'm particularly interested in finding disparities by race/ethnicity and income, but I also plan to explore the other variables. 
+<br></br>
+I also did some more research this week to find more examples of the features I want my app to have. I experimented a bit with a template I found online, which I have [stored here](https://github.com/amandavhernan/searchable-map-template). Ideally, I would like users to be able to search by address, whether that's a full address or just the county name or ZIP code. I also want users to be able to filter by sample type (soil, groundwater, drinking water, surface water), industry (military, land fill, etc.), and the total amount of PFAS detected. I would like one of these filters to be color-coded, and I'm leaning toward making that be the "total_PFAS" field. I'm struggling with deciding what's actually doable in the time I have left and whether I want to make a locator map or a more complex choropleth map that also changes views as users interact with it.
 
 CSV → SQLite
 ``` 
@@ -26,8 +34,8 @@ The ACS variables I'm interested in are:
 ### Goals
 
 - [ ] Grab Census ACS variables and merge with original dataset
-- [ ] Set up app.py and index.html scripts (mapbox choropleth maps with search/filter feature, searchable table)
-- [ ] Set up analysis.py script to summarize counts by ZIP code, county, and state
+- [ ] Set up app and index.html scripts (mapbox choropleth maps with search/filter feature, searchable table)
+- [ ] Set up analysis script to summarize data by ZIP code, county, and state
 - [ ] Experiment with CSS styling
 
 ## Update | 4/14/23
