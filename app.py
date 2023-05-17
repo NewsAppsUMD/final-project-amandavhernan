@@ -55,22 +55,18 @@ def index():
 
     # geo search 
     plugins.Geocoder().add_to(folium_map)
-
+    
+    # save map as html
     folium_map.save('templates/map.html')
-    return render_template('index.html')
+
+    # load table data
+    data = pd.read_csv('data/known_sites_clean.csv').to_dict(orient='records')
+
+    return render_template('index.html', data=data)
 
 @app.route('/map')
 def map():
     return render_template('map.html')
-
-# table
-@app.route('/table')
-def table():
-    # load data
-    data = pd.read_csv('data/known_sites_clean.csv').to_dict(orient='records')
-
-    # return the data for the table
-    return render_template("table.html", data=data)
 
 if __name__ == '__main__':
     app.run(port=8080, debug=True)
