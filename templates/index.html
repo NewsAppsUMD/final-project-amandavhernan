@@ -29,36 +29,38 @@
         <div class="row">
             <div class="col-md-6">
                     <h4><i class="fa-solid fa-circle-info fa-l" style="color: #235d72"></i> About</h4>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                    <p>The development of this app was partly inspired by the U.S. Environmental Protection Agency's recent decision to set a federal mandate for PFAS levels in drinking water, with a proposed limit of 4 parts per trillion for PFOA and PFOS. The data used in this app is sourced from Northeastern University's PFAS Project Lab. It's important to note that this data is limited due to a lack of widespread testing nationwide.</p>
+                    <p>This app allows users to freely explore PFAS contamination across the country through two different interactive components: a locator map and a table. The locator map pinpoints the exact locations of PFAS contamination sites while the table displays the data in a more readable format. Users can also use search and sorting options to explore the data further. </p>
             </div>
 
             <div class="col-md-6">
-                    <h4><i class="fa-sharp fa-solid fa-droplet fa-l" style="color: #235d72"></i> Why PFAS Matter</h4>
-                    <p>Per- and polyfluoroalkyl substances (PFAS) have become a major concern for health and environmental experts worldwide. PFAS are a group of man-made chemicals widely used in various products, such as non-stick cookware, waterproof clothing, and food packaging due to their resistance to heat, water, and oil. However, their non-biodegradable nature has led to a build-up of these chemicals in humans and the environment. According to the Centers for Disease Control and Prevention, overexposure to PFAS may lead to health risks, such as changes in liver enzymes, increased risk of kidney cancer and increased cholesterol levels. This has prompted increased regulation and efforts across the country to reduce the use and contamination of PFAS. The chemicals can contaminate soil and water, and their widespread presence worldwide has made them a significant public health issue.</p>
+                    <h4><i class="fa-sharp fa-solid fa-droplet fa-l" style="color: #235d72"></i> Why PFAS Contamination Matters</h4>
+                    <p>Per- and polyfluoroalkyl substances (PFAS) have become a major concern for health and environmental experts worldwide. PFAS are a group of synthetic chemicals widely used in various products, such as non-stick cookware, waterproof clothing and food packaging due to their resistance to heat, water and oil. Their non-biodegradable nature has led to a build-up of these chemicals in humans and the environment.</p>
+                    <p>Overexposure to PFAS may lead to health risks, such as changes in liver enzymes, increased risk of kidney cancer and increased cholesterol levels. This has prompted increased regulation and efforts across the country to reduce the use and contamination of PFAS. The chemicals can contaminate soil and water, and their widespread presence worldwide has made them a significant public health issue.</p>
             </div>
 
         <br><br>
 
-        <div class="row">
+        <div class="row" style="margin-top: 40px; margin-bottom: 40px;">
             <div class="col-md-4">
-                    <p style="font-size: 20px; text-align: center;">There are at least <b style="color: #235d72;">1,778 known PFAS sites across the country</b>. All 50 states have <b>at least one</b> known PFAS site.</p>
+                    <p style="font-size: 20px; text-align: center;">There are at least <b style="color: #235d72;">1,778 known PFAS sites across the country</b>. Every state has <b style="color: #235d72;">at least two</b> known PFAS sites.</p>
             </div>
 
             <div class="col-md-4">
-                    <p style="font-size: 20px; text-align: center;">The states with the most contamination are <b>New Hampshire, California and Michigan</b>.</p>
+                    <p style="font-size: 20px; text-align: center;">The three states with the highest number of PFAS sites are <b style="color: #235d72;">New Hampshire with 471, California with 253 and Michigan with 197</b>.</p>
             </div>
 
             <div class="col-md-4">
-                    <p style="font-size: 20px; text-align: center;"><b>Landfills and military bases or facilities</b> contribute the most to PFAS contamination, according to available data.</p>
+                    <p style="font-size: 20px; text-align: center;"><b style="color: #235d72;">Landfills, military bases or facilities and industrial sites</b> contribute the most to PFAS contamination.</p>
             </div>
+        </div>
 
         <br></br>
 
         <!-- locator map -->
-        <h4>PFAS Locator Map</h4>
-        <p>Instructions</p>
-        <center><iframe class="map", src="/map" width="1200" height="600"></iframe></center>
+        <center><iframe class="map", src="/map" width="1000" height="600"></iframe></center>
 
+        <!-- table -->
         {% include 'table.html' %}
 
     </div>
@@ -88,7 +90,7 @@ h2 {
 }
 
 .container {
-    width: 1200px;
+    width: 1000px;
 }
 
 .byline {
