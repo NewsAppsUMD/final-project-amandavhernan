@@ -2,10 +2,10 @@ from flask import Flask, render_template
 import folium
 from folium import plugins
 import pandas as pd
-import csv
 
 app = Flask(__name__)
 
+# map
 @app.route('/')
 def index():
     
@@ -63,13 +63,14 @@ def index():
 def map():
     return render_template('map.html')
 
-@app.route('/')
+# table
+@app.route('/table')
 def table():
-    with open('data/known_sites_clean.csv') as csvfile:
-        reader = csv.DictReader(csvfile)
-        data = [row for row in reader]
-        print(data)  # debug
-    return render_template('index.html', data=data)
+    # load data
+    data = pd.read_csv('data/known_sites_clean.csv').to_dict(orient='records')
+
+    # return the data for the table
+    return render_template("table.html", data=data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=8080, debug=True)
