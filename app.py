@@ -35,7 +35,7 @@ def index():
             fill=True,
             fill_color=pfas_desc_colors[row["pfas_desc"]],
             fill_opacity = 0.5,
-            popup = f"<b>Name:</b> {row['site_name']}<br><b>Industry:</b> {row['industry']}<br><b>Total PFAS (ng/L):</b> {row['pfas_desc']}<br><b>Address:</b> {row['number']} {row['street']} {row['city']}, {row['state']} {row['geocoded_zip']}", max_width=300).add_to(folium_map)
+            popup = f"<b>Site Name:</b> {row['site_name']}<br><b>Industry:</b> {row['industry']}<br><b>Total PFAS (ng/L):</b> {row['pfas_desc']}<br><b>Address:</b> {row['number']} {row['street']} {row['city']}, {row['state']} {row['geocoded_zip']}").add_to(folium_map)
 
     # legend    
     legend_html = """
@@ -60,13 +60,17 @@ def index():
     folium_map.save('templates/map.html')
 
     # load table data
-    data = pd.read_csv('data/known_sites_clean.csv').to_dict(orient='records')
+    data = pfas.to_dict(orient='records')
 
     return render_template('index.html', data=data)
 
 @app.route('/map')
 def map():
     return render_template('map.html')
+
+@app.route('/table')
+def table():
+    return render_template('table.html')
 
 if __name__ == '__main__':
     app.run(port=8080, debug=True)
