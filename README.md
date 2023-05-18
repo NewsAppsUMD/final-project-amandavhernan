@@ -14,7 +14,7 @@ Overall, building this app was a fun challenge that allowed me to learn new skil
 
 ### Deployment & Maintenance 🛠️
 
-My app must be deployed via codespaces by running "python app.py" in the terminal. In the future, this app can be made available through GitHub Pages, but I have to figure out how to properly freeze the locator map so it remains useable and interactive. Users can download the data as a CSV by cliking on the "Download CSV" link under the map. This will redirect users to the raw version of the CSV where they can save the file to their device. 
+My app must be deployed via codespaces by running "python app.py" in the terminal. In the future, this app can be made available through GitHub Pages, but I have to figure out how to properly freeze the locator map so it remains useable and interactive. Users can download the data as a CSV by clicking on the "Download CSV" link under the map. This will redirect users to the raw version of the CSV where they can save the file to their device. 
 
 The update schedule for this app would depend on the frequency of new data being released by the PFAS Project Lab at Northeastern University. The data was last updated in October 2022. It's possible that the lab will update their dataset around the same time this year, which is when I would schedule an update. Ideally, updates would be done incrementally to ensure that the app remains functional and user-friendly at all times. However, if there are significant changes to the data format or structure, wholesale updates may be necessary to ensure that the app is compatible with the new data.
 
